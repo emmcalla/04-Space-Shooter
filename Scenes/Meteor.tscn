@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Meteor.gd" type="Script" id=1]
+[ext_resource path="res://Assets/asteroids/medium/a10000.png" type="Texture" id=2]
+
+[node name="Meteor" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+min_speed = null
+max_speed = null
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 14, 14 )
+scale = Vector2( 1.23333, 1.23333 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 14, 14 )
+scale = Vector2( 1.23333, 1.23333 )
+polygon = PoolVector2Array( 22, -27.7, 22, -25.9, 31, -17.9, 31, -15.5, 37.4, -4, 34.3, -4, 26.3, 14, 24.9, 14, 15.9, 24, 13.3, 24, -2.6, 31, -7.4, 31, -22, 25.4, -22, 23.5, -33.4, 3, -30.3, 3, -19.3, -21, -17.6, -21, -4, -30.1, -4, -32.4 )
